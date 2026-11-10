@@ -1,0 +1,2268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>NUMBER ONE GROUP | Beyond Construction</title>
+  <meta name="description" content="مجموعة NUMBER ONE: حلول العزل الهندسي المتقدم، التشطيبات الفندقية الفاخرة، والمقاولات والتطوير العقاري. حماية تدوم لأجيال بضمان معتمد 10 سنوات.">
+  
+  <!-- Favicon / Brand Mark -->
+  <link rel="icon" type="image/png" href="mark.png">
+  
+  <!-- Luxury Architectural Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN SYSTEM & LUXURY TOKENS (INSPIRED BY GROVA & NUMBER ONE BRAND)
+       ========================================================================== */
+    :root {
+      --navy: #151c2d;
+      --navy-deep: #0a111a;
+      --navy-soft: #1d263b;
+      --teal: #075d75;
+      --teal-deep: #03495f;
+      --teal-glow: rgba(7, 93, 117, 0.45);
+      --gold: #c99367;
+      --gold-light: #e4c19c;
+      --gold-glow: rgba(201, 147, 103, 0.35);
+      --sand: #eee5da;
+      --sand-light: #f7f3ee;
+      --paper: #fbf9f5;
+      --ink: #141923;
+      --ink-muted: #5e6778;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+      --border-dark: rgba(21, 28, 45, 0.08);
+      
+      --font-ar: "Noto Kufi Arabic", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-en: "Marcellus", serif;
+      --font-num: "Rubik", sans-serif;
+      
+      --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-ar);
+      line-height: 1.65;
+      overflow-x: hidden;
+      selection-background-color: var(--gold);
+      selection-color: #ffffff;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #ffffff;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease, opacity 0.3s ease;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* Container */
+    .wrap {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 5vw, 64px);
+    }
+
+    /* Minimal Editorial Section Kicker */
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 11.5px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-kicker::before {
+      content: "";
+      display: inline-block;
+      width: 38px;
+      height: 1.5px;
+      background: currentColor;
+    }
+
+    .section-kicker.light {
+      color: var(--gold-light);
+    }
+
+    /* Section Padding - Minimal & Generous breathing room */
+    .section-pad {
+      padding: clamp(80px, 11vw, 150px) 0;
+    }
+
+    /* Buttons & Interactive Pills */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 28px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.35s var(--transition-smooth);
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .pill-gold {
+      background: var(--gold);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(201, 147, 103, 0.28);
+    }
+
+    .pill-gold:hover {
+      background: #d6a176;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(201, 147, 103, 0.4);
+    }
+
+    .pill-navy {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .pill-navy:hover {
+      background: var(--navy-soft);
+      transform: translateY(-2px);
+    }
+
+    .pill-outline {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .pill-outline:hover {
+      border-color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .pill-large {
+      min-height: 56px;
+      padding: 16px 36px;
+      font-size: 14px;
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(44px);
+      transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
+      will-change: opacity, transform;
+    }
+
+    .reveal.is-inview {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger reveals */
+    .delay-1 { transition-delay: 0.15s; }
+    .delay-2 { transition-delay: 0.3s; }
+    .delay-3 { transition-delay: 0.45s; }
+
+    /* ==========================================================================
+       2. CINEMATIC SPLASH SCREEN (LOGO APPEARS IN THE MIDDLE FIRST)
+       ========================================================================== */
+    #splashScreen {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: radial-gradient(circle at center, #182235 0%, #0a111a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.85s var(--transition-smooth), visibility 0.85s;
+      cursor: pointer;
+    }
+
+    #splashScreen.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .splash-glow {
+      position: absolute;
+      width: clamp(260px, 45vw, 480px);
+      height: clamp(260px, 45vw, 480px);
+      background: radial-gradient(circle, rgba(7, 93, 117, 0.35) 0%, rgba(201, 147, 103, 0.12) 50%, transparent 70%);
+      filter: blur(48px);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: pulseGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      100% { transform: scale(1.15); opacity: 1; }
+    }
+
+    .splash-logo-box {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .splash-logo-img {
+      width: clamp(170px, 22vw, 250px);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 35px rgba(0, 0, 0, 0.65));
+      animation: splashLogoReveal 1.3s var(--transition-smooth) both;
+    }
+
+    @keyframes splashLogoReveal {
+      0% {
+        opacity: 0;
+        transform: scale(0.86) translateY(20px);
+        filter: blur(8px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+      }
+    }
+
+    .splash-slogan {
+      margin-top: 24px;
+      font-family: var(--font-en);
+      font-size: clamp(12px, 1.3vw, 15px);
+      letter-spacing: 0.32em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      opacity: 0.85;
+      animation: fadeIn 1.2s ease-out 0.4s both;
+    }
+
+    .splash-bar {
+      margin-top: 30px;
+      width: 140px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .splash-bar::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      animation: splashProgress 1.7s ease-in-out infinite;
+    }
+
+    @keyframes splashProgress {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .splash-skip-hint {
+      position: absolute;
+      bottom: 40px;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.3s;
+    }
+
+    #splashScreen:hover .splash-skip-hint {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ==========================================================================
+       3. SITE HEADER (MINIMAL FROSTED LUXURY)
+       ========================================================================== */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 96px;
+      padding: 0 clamp(20px, 5vw, 64px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: height 0.4s ease, background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+    }
+
+    .site-header.is-scrolled {
+      height: 74px;
+      background: rgba(10, 17, 26, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .header-brand img {
+      height: clamp(38px, 4.5vw, 48px);
+      width: auto;
+      object-fit: contain;
+    }
+
+    .site-header nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 2.5vw, 42px);
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .site-header nav a {
+      position: relative;
+      color: rgba(255, 255, 255, 0.82);
+      transition: color 0.3s ease;
+    }
+
+    .site-header nav a:hover {
+      color: #ffffff;
+    }
+
+    .site-header nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: var(--gold-light);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+
+    [dir="ltr"] .site-header nav a::after {
+      transform-origin: left;
+    }
+
+    .site-header nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-lang {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      padding: 7px 16px;
+      border-radius: 100px;
+      font-size: 11.5px;
+      font-family: var(--font-num);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.06em;
+    }
+
+    .btn-lang:hover {
+      background: #ffffff;
+      color: var(--navy);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 18px;
+      height: 1.5px;
+      background: #ffffff;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      inset: 0;
+      background: rgba(10, 17, 26, 0.98);
+      backdrop-filter: blur(24px);
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      padding: 40px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+
+    .mobile-drawer.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer a {
+      font-size: 22px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .mobile-drawer-close {
+      position: absolute;
+      top: 32px;
+      right: 32px;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION WITH FULL-SCREEN VIDEO & TEXT GOING THROUGH VIDEO
+       ========================================================================== */
+    .hero {
+      position: relative;
+      height: 100vh;
+      height: 100svh;
+      width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      background: var(--navy-deep);
+    }
+
+    /* Video Background */
+    .hero-video-wrap {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      opacity: 0.88;
+      transition: transform 0.8s ease-out;
+    }
+
+    /* Gradient Shades for Maximum Readability & Luxury */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      background:
+        radial-gradient(circle at 75% 40%, rgba(7, 93, 117, 0.28) 0%, transparent 65%),
+        linear-gradient(to top, rgba(10, 17, 26, 0.95) 0%, rgba(10, 17, 26, 0.35) 45%, rgba(10, 17, 26, 0.7) 100%),
+        linear-gradient(to right, rgba(10, 17, 26, 0.8) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    [dir="ltr"] .hero-overlay {
+      background:
+        radial-gradient(circle at 25% 40%, rgba(7, 93, 117, 0.28) 0%, transparent 65%),
+        linear-gradient(to top, rgba(10, 17, 26, 0.95) 0%, rgba(10, 17, 26, 0.35) 45%, rgba(10, 17, 26, 0.7) 100%),
+        linear-gradient(to left, rgba(10, 17, 26, 0.8) 0%, transparent 60%);
+    }
+
+    /* KINETIC TYPOGRAPHY GOING THROUGH VIDEO (MARQUEE GLIDE) */
+    .hero-ticker-wrap {
+      position: absolute;
+      top: 52%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+      z-index: 3;
+      overflow: hidden;
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.16;
+    }
+
+    .hero-ticker-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 40px;
+      animation: tickerMotion 38s linear infinite;
+      will-change: transform;
+    }
+
+    .hero-ticker-item {
+      font-family: var(--font-en);
+      font-size: clamp(70px, 12vw, 170px);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.75);
+    }
+
+    .hero-ticker-dot {
+      color: var(--gold-light);
+      font-size: clamp(24px, 4vw, 50px);
+      -webkit-text-stroke: 0;
+    }
+
+    @keyframes tickerMotion {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    [dir="rtl"] .hero-ticker-track {
+      animation-direction: reverse;
+    }
+
+    /* Hero Foreground Content (Minimalist & Impactful) */
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      max-width: 760px;
+      padding-top: 60px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 6px 18px;
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-title {
+      font-size: clamp(38px, 5.8vw, 76px);
+      line-height: 1.12;
+      font-weight: 700;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-title em {
+      font-style: normal;
+      color: var(--gold-light);
+      position: relative;
+    }
+
+    .hero-copy {
+      font-size: clamp(15px, 1.35vw, 18px);
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 580px;
+      margin-bottom: 38px;
+      font-weight: 400;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #ffffff;
+      padding: 14px 18px;
+      transition: color 0.3s;
+    }
+
+    .text-link:hover {
+      color: var(--gold-light);
+    }
+
+    .text-link svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      transition: transform 0.3s;
+    }
+
+    [dir="rtl"] .text-link svg {
+      transform: scaleX(-1);
+    }
+
+    .text-link:hover svg {
+      transform: translateX(4px);
+    }
+
+    [dir="rtl"] .text-link:hover svg {
+      transform: scaleX(-1) translateX(4px);
+    }
+
+    /* Sound Toggle Button (Like Grova) */
+    .hero-sound-toggle {
+      position: absolute;
+      bottom: clamp(24px, 4vw, 40px);
+      left: clamp(20px, 5vw, 64px);
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(10, 17, 26, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      padding: 9px 16px;
+      border-radius: 100px;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    [dir="ltr"] .hero-sound-toggle {
+      left: auto;
+      right: clamp(20px, 5vw, 64px);
+    }
+
+    .hero-sound-toggle:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .hero-sound-toggle svg {
+      width: 15px;
+      height: 15px;
+      fill: currentColor;
+    }
+
+    /* Vertical Sidebar Index (01 — 03 from Grova) */
+    .hero-index {
+      position: absolute;
+      top: 50%;
+      right: clamp(20px, 4vw, 48px);
+      transform: translateY(-50%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.45);
+      font-family: var(--font-num);
+      font-size: 12px;
+    }
+
+    [dir="ltr"] .hero-index {
+      right: auto;
+      left: clamp(20px, 4vw, 48px);
+    }
+
+    .hero-index i {
+      width: 1px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Scroll Cue */
+    .scroll-cue {
+      position: absolute;
+      bottom: clamp(24px, 4vw, 40px);
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1.5px;
+      height: 28px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 1.8s infinite;
+    }
+
+    @keyframes scrollPulse {
+      0% { transform: scaleY(0.2); opacity: 0; transform-origin: top; }
+      50% { transform: scaleY(1); opacity: 1; transform-origin: top; }
+      100% { transform: scaleY(0.2); opacity: 0; transform-origin: bottom; }
+    }
+
+    /* ==========================================================================
+       5. MINIMALIST EDITORIAL SECTIONS (REVEALING ON SLIDE DOWN)
+       ========================================================================== */
+    
+    /* Section 1: Intro / The Foundation */
+    .intro-section {
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid var(--border-dark);
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 96px);
+      align-items: center;
+    }
+
+    .intro-heading {
+      font-size: clamp(32px, 4.2vw, 56px);
+      line-height: 1.18;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+
+    .intro-copy .lead {
+      font-size: clamp(17px, 1.5vw, 21px);
+      line-height: 1.65;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .intro-copy p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.75;
+      margin-bottom: 28px;
+    }
+
+    .lined-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--navy);
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    .lined-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transition: transform 0.3s;
+    }
+
+    .lined-link:hover::after {
+      transform: scaleX(0.85);
+    }
+
+    /* Section 2: Services (3 Minimal Editorial Cards) */
+    .services-section {
+      background: var(--navy);
+      color: #ffffff;
+      position: relative;
+      z-index: 10;
+    }
+
+    .sec-head-minimal {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: clamp(44px, 6vw, 72px);
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .sec-head-minimal h2 {
+      font-size: clamp(30px, 3.8vw, 48px);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .sec-head-minimal p {
+      max-width: 440px;
+      font-size: 14.5px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.65;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(18px, 2.5vw, 32px);
+    }
+
+    .service-card {
+      position: relative;
+      height: clamp(420px, 45vw, 540px);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(24px, 3vw, 36px);
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.5s var(--transition-smooth), border-color 0.5s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+    }
+
+    .service-card-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--transition-smooth);
+      z-index: 1;
+    }
+
+    .service-card:hover .service-card-img {
+      transform: scale(1.06);
+    }
+
+    .service-card-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10, 17, 26, 0.95) 0%, rgba(10, 17, 26, 0.45) 50%, rgba(10, 17, 26, 0.2) 100%);
+      z-index: 2;
+      transition: opacity 0.4s;
+    }
+
+    .service-card:hover .service-card-shade {
+      opacity: 0.85;
+    }
+
+    .service-card-num {
+      position: relative;
+      z-index: 3;
+      font-family: var(--font-num);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gold-light);
+      letter-spacing: 0.12em;
+    }
+
+    .service-card-content {
+      position: relative;
+      z-index: 3;
+    }
+
+    .service-card-content h3 {
+      font-size: clamp(20px, 1.8vw, 24px);
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .service-card-content p {
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 18px;
+    }
+
+    .service-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* Section 3: Trust & Legacy Stats (Minimal Split) */
+    .legacy-section {
+      background: var(--sand);
+      color: var(--navy);
+      padding: clamp(70px, 8vw, 110px) 0;
+      position: relative;
+      z-index: 10;
+    }
+
+    .legacy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+
+    .legacy-heading h2 {
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .legacy-heading p {
+      font-size: 15px;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+
+    .stats-minimal {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(16px, 2.5vw, 32px);
+      border-top: 1px solid rgba(21, 28, 45, 0.12);
+      padding-top: 36px;
+    }
+
+    .stat-item strong {
+      display: block;
+      font-family: var(--font-num);
+      font-size: clamp(34px, 4.2vw, 54px);
+      line-height: 1;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .stat-item strong sup {
+      font-size: 0.55em;
+      color: var(--gold);
+    }
+
+    .stat-item span {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--ink-muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* Section 4: Interactive Before / After Inspection */
+    .inspection-section {
+      background: var(--paper);
+      position: relative;
+      z-index: 10;
+    }
+
+    .inspection-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+
+    .inspection-copy h2 {
+      font-size: clamp(30px, 3.8vw, 50px);
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .inspection-copy p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--ink-muted);
+      margin-bottom: 28px;
+    }
+
+    /* Minimal Draggable Before/After Slider */
+    .compare-box {
+      position: relative;
+      height: clamp(380px, 42vw, 520px);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(21, 28, 45, 0.14);
+      background: var(--navy);
+      user-select: none;
+      touch-action: pan-y;
+      direction: ltr; /* Always LTR for slider math */
+    }
+
+    .compare-box img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .compare-after {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+    }
+
+    .compare-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: #ffffff;
+      transform: translateX(-50%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .compare-handle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .compare-tag {
+      position: absolute;
+      top: 20px;
+      z-index: 11;
+      padding: 6px 14px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(10, 17, 26, 0.7);
+      color: #ffffff;
+      backdrop-filter: blur(8px);
+    }
+
+    .compare-tag.before { left: 20px; }
+    .compare-tag.after { right: 20px; }
+
+    .compare-range {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 15;
+    }
+
+    /* Section 5: Curated Editorial Projects */
+    .gallery-section {
+      background: var(--navy-deep);
+      color: #ffffff;
+      position: relative;
+      z-index: 10;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      grid-template-rows: repeat(2, 280px);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s var(--transition-smooth);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-item figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px;
+      background: linear-gradient(to top, rgba(10, 17, 26, 0.9) 0%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .gallery-item figcaption span:last-child {
+      font-family: var(--font-num);
+      color: var(--gold-light);
+    }
+
+    /* Section 6: Minimal VIP Booking */
+    .contact-section {
+      position: relative;
+      background: var(--teal-deep);
+      color: #ffffff;
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .contact-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.18;
+      filter: saturate(0.8);
+    }
+
+    .contact-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(3, 73, 95, 0.94) 0%, rgba(21, 28, 45, 0.97) 100%);
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 84px);
+      align-items: center;
+    }
+
+    .contact-copy h2 {
+      font-size: clamp(32px, 4.2vw, 56px);
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .contact-copy p {
+      font-size: 15.5px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: clamp(28px, 4vw, 44px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 7px;
+      letter-spacing: 0.04em;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      background: rgba(10, 17, 26, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 4px;
+      padding: 13px 16px;
+      color: #ffffff;
+      font-size: 14px;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(10, 17, 26, 0.7);
+    }
+
+    .form-group select option {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .form-success.is-visible {
+      display: block;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .form-success img {
+      width: 70px;
+      height: auto;
+      margin: 0 auto 16px;
+    }
+
+    /* ==========================================================================
+       7. MINIMAL LUXURY FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: var(--navy-deep);
+      color: rgba(255, 255, 255, 0.65);
+      padding: clamp(60px, 8vw, 90px) 0 36px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      position: relative;
+      z-index: 10;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand img {
+      height: 48px;
+      width: auto;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 32px;
+      font-size: 13.5px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    .footer-contact-info {
+      display: flex;
+      gap: 24px;
+      font-size: 13.5px;
+      font-family: var(--font-num);
+    }
+
+    .footer-contact-info a {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      margin-top: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* Floating Action Buttons */
+    .fab-wrap {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    [dir="ltr"] .fab-wrap {
+      left: auto;
+      right: 24px;
+    }
+
+    .fab-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: transform 0.3s;
+    }
+
+    .fab-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .fab-wa {
+      background: #25D366;
+    }
+
+    .fab-call {
+      background: var(--navy);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Lightbox Modal */
+    dialog#lightbox {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      max-width: 100vw;
+      max-height: 100vh;
+      border: none;
+      background: rgba(10, 17, 26, 0.94);
+      backdrop-filter: blur(20px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    dialog#lightbox[open] {
+      display: flex;
+    }
+
+    .lb-content {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lb-content img {
+      max-height: 78vh;
+      width: auto;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .lb-close {
+      position: absolute;
+      top: -44px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .site-header nav { display: none; }
+      .menu-toggle { display: flex; }
+      .intro-grid,
+      .legacy-grid,
+      .inspection-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .service-card {
+        height: 380px;
+      }
+      .stats-minimal {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item.tall {
+        grid-row: auto;
+        height: 300px;
+      }
+      .gallery-item {
+        height: 240px;
+      }
+      .hero-index { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. CINEMATIC SPLASH SCREEN (LOGO APPEARS IN THE MIDDLE FIRST)
+       ======================================================================== -->
+  <aside id="splashScreen" aria-label="Welcome screen">
+    <div class="splash-glow"></div>
+    <div class="splash-logo-box">
+      <img src="logo.png" onerror="this.src='nr1/logo.png'; this.onerror=function(){this.src='بروفيل.png';}" alt="NUMBER ONE GROUP" class="splash-logo-img">
+      <div class="splash-slogan" data-i18n="splash_slogan">Three Divisions · One Vision</div>
+      <div class="splash-bar"></div>
+    </div>
+    <div class="splash-skip-hint" data-i18n="splash_skip">اضغط أو مرّر للدخول / CLICK TO ENTER</div>
+  </aside>
+
+  <!-- ========================================================================
+       2. MINIMAL LUXURY SITE HEADER
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <a href="#home" class="header-brand" aria-label="NUMBER ONE Home">
+      <img src="logo.png" onerror="this.src='nr1/logo.png'; this.onerror=function(){this.src='بروفيل.png';}" alt="NUMBER ONE">
+    </a>
+
+    <nav aria-label="Main Navigation">
+      <a href="#services" data-i18n="nav_services">القطاعات</a>
+      <a href="#about" data-i18n="nav_about">عن المجموعة</a>
+      <a href="#inspection" data-i18n="nav_inspection">فحص السطح</a>
+      <a href="#gallery" data-i18n="nav_gallery">الأعمال</a>
+      <a href="#contact" data-i18n="nav_contact">تواصل معنا</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="btn-lang" id="btnLangToggle" aria-label="Switch Language">EN</button>
+      <a class="pill pill-gold" href="#contact" data-i18n="cta_header">احجز معاينة</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="mobile-drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    <a href="#services" data-i18n="nav_services">القطاعات</a>
+    <a href="#about" data-i18n="nav_about">عن المجموعة</a>
+    <a href="#inspection" data-i18n="nav_inspection">فحص السطح</a>
+    <a href="#gallery" data-i18n="nav_gallery">الأعمال</a>
+    <a href="#contact" data-i18n="nav_contact">تواصل معنا</a>
+    <a class="pill pill-gold" href="#contact" data-i18n="cta_header">احجز معاينة</a>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         3. HERO: FULLSCREEN VIDEO + KINETIC TYPOGRAPHY GOING THROUGH VIDEO
+         ======================================================================== -->
+    <section class="hero" id="home">
+      <!-- Fullscreen Architectural Video -->
+      <div class="hero-video-wrap">
+        <video class="hero-video" id="heroVideo" autoplay loop muted playsinline poster="hero.jpg">
+          <source src="hero-video.mp4" type="video/mp4">
+          <source src="https://assets.grovadevelopments.com/assets/videos/ADMIN/HERO_ATTACHMENTS/MAIN_MEDIA/09-2026_1790791891317_010be8e2-6b1c-4a14-84c3-4965426f697e" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+      </div>
+
+      <!-- KINETIC TEXT GOING THROUGH VIDEO -->
+      <div class="hero-ticker-wrap" aria-hidden="true">
+        <div class="hero-ticker-track" id="tickerTrack">
+          <span class="hero-ticker-item">NUMBER ONE GROUP</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">BEYOND CONSTRUCTION</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">WATERPROOFING SOLUTIONS</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">ROCK STAR™ GERMAN MEMBRANE</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">HOSPITALITY FIT-OUT</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">NUMBER ONE GROUP</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">BEYOND CONSTRUCTION</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">WATERPROOFING SOLUTIONS</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">ROCK STAR™ GERMAN MEMBRANE</span>
+          <span class="hero-ticker-dot">✦</span>
+          <span class="hero-ticker-item">HOSPITALITY FIT-OUT</span>
+        </div>
+      </div>
+
+      <!-- Foreground Minimal Copy -->
+      <div class="wrap">
+        <div class="hero-content">
+          <div class="hero-eyebrow" data-i18n="hero_eyebrow">WATERPROOFING · HOSPITALITY · DEVELOPMENTS</div>
+          <h1 class="hero-title" data-i18n="hero_title">
+            العزل أساس<br>
+            <em>أمان بيتك.</em>
+          </h1>
+          <p class="hero-copy" data-i18n="hero_copy">
+            نحمي ما تبنيه اليوم ليبقى آمناً لأجيال، بأنظمة عزل مائي وحراري هندسية معتمدة بضمان يصل إلى 10 سنوات.
+          </p>
+          <div class="hero-ctas">
+            <a class="pill pill-gold pill-large" href="#inspection" data-i18n="cta_inspect">افحص سطحك الآن</a>
+            <a class="text-link" href="#services" data-i18n="cta_services">
+              <span>اكتشف القطاعات</span>
+              <svg viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Audio Unmute Button (Grova Style) -->
+      <button class="hero-sound-toggle" id="btnSoundToggle" aria-label="Toggle video sound">
+        <svg viewBox="0 0 24 24" id="soundIcon"><path d="M11 5L6 9H2v6h4l5 4V5zm8.5 7c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+        <span id="soundText">Sound Off</span>
+      </button>
+
+      <!-- Sidebar Index (01 — 03 from Grova) -->
+      <div class="hero-index">
+        <span>01</span>
+        <i></i>
+        <span>03</span>
+      </div>
+
+      <!-- Scroll Cue (When user slides down content appears) -->
+      <a href="#about" class="scroll-cue" aria-label="Scroll to content">
+        <span data-i18n="scroll_cue">مرّر للأسفل</span>
+        <div class="scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- ========================================================================
+         4. INTRO SECTION (REVEALS AS YOU SLIDE DOWN)
+         ======================================================================== -->
+    <section class="intro-section section-pad" id="about">
+      <div class="wrap">
+        <div class="intro-grid">
+          <div class="reveal">
+            <span class="section-kicker" data-i18n="kicker_about">01 / الرؤية والأساس</span>
+            <h2 class="intro-heading" data-i18n="intro_title">
+              نحمي المباني<br>
+              من أول نقطة.
+            </h2>
+          </div>
+          <div class="intro-copy reveal delay-1">
+            <p class="lead" data-i18n="intro_lead">
+              مجموعة هندسية متخصصة تجمع بين تكنولوجيا العزل الأوروبية، أرقى التشطيبات الفندقية، والتطوير الإنشائي المتكامل.
+            </p>
+            <p data-i18n="intro_sub">
+              من المعاينة الأولى وحتى التسليم والضمان، ندرس كل منشأة كحالة مستقلة لنقدم حلاً هندسياً شاملاً يدوم لعقود دون حاجة لحلول ترقيعية.
+            </p>
+            <a class="lined-link" href="#contact" data-i18n="intro_link">
+              <span>تواصل مع الفريق الهندسي</span>
+              &larr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. THREE CORE DIVISIONS (MINIMAL EDITORIAL CARDS)
+         ======================================================================== -->
+    <section class="services-section section-pad" id="services">
+      <div class="wrap">
+        <div class="sec-head-minimal reveal">
+          <div>
+            <span class="section-kicker light" data-i18n="kicker_services">القطاعات المتخصصة</span>
+            <h2 data-i18n="services_title">ثلاثة قطاعات.<br>رؤية واحدة.</h2>
+          </div>
+          <p data-i18n="services_sub">منظومة هندسية متكاملة تضمن حماية وجمال واستدامة استثماراتك العقارية.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Division 01 -->
+          <article class="service-card reveal delay-1" onclick="location.href='#contact'">
+            <img class="service-card-img" src="protection.jpg" onerror="this.src='nr1/protection.jpg'" alt="Waterproofing">
+            <div class="service-card-shade"></div>
+            <span class="service-card-num">01</span>
+            <div class="service-card-content">
+              <h3 data-i18n="s1_title">العزل المائي والحراري</h3>
+              <p data-i18n="s1_desc">حماية تامة للأسطح والخزانات من تسريبات الأمطار وحرارة الصيف الشديدة.</p>
+              <div class="service-card-btn" data-i18n="btn_inspect_div">حجز معاينة &larr;</div>
+            </div>
+          </article>
+
+          <!-- Division 02 -->
+          <article class="service-card reveal delay-2" onclick="location.href='#contact'">
+            <img class="service-card-img" src="rockstar.jpg" onerror="this.src='nr1/rockstar.jpg'" alt="Rock Star Membrane">
+            <div class="service-card-shade"></div>
+            <span class="service-card-num">02</span>
+            <div class="service-card-content">
+              <h3 data-i18n="s2_title">عزل روك ستار المعتمد</h3>
+              <p data-i18n="s2_desc">أغشية بيتومينية ألمانية معززة بالبوليستر ومقاومة للإجهادات الحرارية.</p>
+              <div class="service-card-btn" data-i18n="btn_specs">المواصفات والضمان &larr;</div>
+            </div>
+          </article>
+
+          <!-- Division 03 -->
+          <article class="service-card reveal delay-3" onclick="location.href='#contact'">
+            <img class="service-card-img" src="quality.jpg" onerror="this.src='nr1/quality.jpg'" alt="Hospitality Fit-Out">
+            <div class="service-card-shade"></div>
+            <span class="service-card-num">03</span>
+            <div class="service-card-content">
+              <h3 data-i18n="s3_title">التصميم الفندقي والإنشاءات</h3>
+              <p data-i18n="s3_desc">تشطيبات معمارية فاخرة وإشراف هندسي متكامل للڤلل والفنادق والمنشآت.</p>
+              <div class="service-card-btn" data-i18n="btn_consult">استشارة معمارية &larr;</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. PROVEN STATS (MINIMAL TRUST BAR)
+         ======================================================================== -->
+    <section class="legacy-section" id="legacy">
+      <div class="wrap">
+        <div class="legacy-grid">
+          <div class="legacy-heading reveal">
+            <span class="section-kicker" data-i18n="kicker_trust">جودة تؤكدها الأرقام</span>
+            <h2 data-i18n="trust_title">حماية تعتمد عليها.</h2>
+            <p data-i18n="trust_desc">لا نقيس النجاح بعدد المشروعات فقط، بل بعدد السنوات التي تظل فيها منشآتك آمنة وخالية من أي تسريب.</p>
+          </div>
+
+          <div class="stats-minimal reveal delay-1">
+            <div class="stat-item">
+              <strong>10<sup>+</sup></strong>
+              <span data-i18n="stat_y">سنوات ضمان</span>
+            </div>
+            <div class="stat-item">
+              <strong>100<sup>%</sup></strong>
+              <span data-i18n="stat_p">مقاوم للتسريب</span>
+            </div>
+            <div class="stat-item">
+              <strong>250<sup>k+</sup></strong>
+              <span data-i18n="stat_sqm">م² مساحات معزولة</span>
+            </div>
+            <div class="stat-item">
+              <strong>24<sup>h</sup></strong>
+              <span data-i18n="stat_resp">سرعة المعاينة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. BEFORE / AFTER INTERACTIVE SLIDER (PRECISION STARTS WITH INSPECTION)
+         ======================================================================== -->
+    <section class="inspection-section section-pad" id="inspection">
+      <div class="wrap">
+        <div class="inspection-grid">
+          <div class="inspection-copy reveal">
+            <span class="section-kicker" data-i18n="kicker_inspect">فحص السطح</span>
+            <h2 data-i18n="inspect_title">
+              الفرق يبدأ<br>
+              بالمعاينة الصحيحة.
+            </h2>
+            <p data-i18n="inspect_desc">
+              الشروخ، البقع الداكنة، وتجمع المياه علامات مبكرة لا يجب تجاهلها. حرّك المؤشر لمشاهدة الفرق الحقيقي بعد العزل المعتمد.
+            </p>
+            <a class="pill pill-navy pill-large" href="#contact" data-i18n="cta_free_audit">اطلب معاينة مجانية</a>
+          </div>
+
+          <!-- Draggable Comparison Slider -->
+          <div class="compare-box reveal delay-1" id="compareBox">
+            <img src="before.jpg" onerror="this.src='nr1/before.jpg'" alt="Before Waterproofing">
+            <div class="compare-after" id="compareAfter">
+              <img src="roof.jpg" onerror="this.src='nr1/roof.jpg'" alt="After Waterproofing">
+            </div>
+            <div class="compare-line" id="compareLine">
+              <div class="compare-handle">⇄</div>
+            </div>
+            <span class="compare-tag before" data-i18n="tag_before">قبل</span>
+            <span class="compare-tag after" data-i18n="tag_after">بعد</span>
+            <input type="range" min="5" max="95" value="50" class="compare-range" id="compareRange" aria-label="Compare Before and After">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. CURATED EDITORIAL GALLERY
+         ======================================================================== -->
+    <section class="gallery-section section-pad" id="gallery">
+      <div class="wrap">
+        <div class="sec-head-minimal reveal">
+          <div>
+            <span class="section-kicker light" data-i18n="kicker_gallery">سجل المشروعات</span>
+            <h2 data-i18n="gallery_title">نتيجة تتحدث<br>عن نفسها.</h2>
+          </div>
+          <p data-i18n="gallery_sub">مشروعات حقيقية، تفاصيل هندسية دقيقة، وجودة تحافظ على قيمة كل منشأة.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item tall reveal delay-1" onclick="openLightbox('night.jpg', 'حماية في كل موسم — فيلات سكنية')">
+            <img src="night.jpg" onerror="this.src='nr1/night.jpg'" alt="Luxury Villa Roof">
+            <figcaption>
+              <span data-i18n="g1_title">حماية في كل موسم — فيلات سكنية</span>
+              <span>01</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal delay-2" onclick="openLightbox('apply.jpg', 'تطبيق دقيق لخامات روك ستار المعتمدة')">
+            <img src="apply.jpg" onerror="this.src='nr1/apply.jpg'" alt="Torch-on Application">
+            <figcaption>
+              <span data-i18n="g2_title">تنفيذ هندسي دقيق بشعلة اللحام</span>
+              <span>02</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item reveal delay-3" onclick="openLightbox('construction.jpg', 'مشروعات المقاولات والإنشاءات')">
+            <img src="construction.jpg" onerror="this.src='nr1/construction.jpg'" alt="Construction Works">
+            <figcaption>
+              <span data-i18n="g3_title">تطوير وإنشاءات متكاملة</span>
+              <span>03</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. VIP CONSULTATION & FAST BOOKING (MINIMAL GLASS FORM)
+         ======================================================================== -->
+    <section class="contact-section section-pad" id="contact">
+      <img class="contact-bg" src="leak.jpg" onerror="this.src='nr1/leak.jpg'" alt="Waterproofing Background">
+      <div class="contact-overlay"></div>
+
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <span class="section-kicker light" data-i18n="kicker_contact">جاهز تحمي بيتك؟</span>
+            <h2 data-i18n="contact_title">
+              قبل أول مطرة،<br>
+              خلّي سطحك جاهز.
+            </h2>
+            <p data-i18n="contact_sub">
+              احجز موعد المعاينة الهندسية المعتمدة وتواصل مباشرة مع الفريق الفني لمجموعة NUMBER ONE.
+            </p>
+            <div style="margin-top: 24px;">
+              <small style="display:block; color:var(--gold-light); font-size:11px; text-transform:uppercase; letter-spacing:0.15em;" data-i18n="lbl_phone">الخط الساخن</small>
+              <strong style="font-size: 24px; font-family: var(--font-num);"><a href="tel:01099227740" dir="ltr">01099227740</a></strong>
+            </div>
+          </div>
+
+          <div class="contact-card reveal delay-1">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label data-i18n="lbl_name">الاسم بالكامل *</label>
+                <input type="text" id="custName" required placeholder="مثال: م. أحمد عبد الله">
+              </div>
+
+              <div class="form-group">
+                <label data-i18n="lbl_mobile">رقم الموبايل / واتساب *</label>
+                <input type="tel" id="custPhone" required placeholder="01xxxxxxxxx">
+              </div>
+
+              <div class="form-group">
+                <label data-i18n="lbl_service">نوع الخدمة المطلوبة</label>
+                <select id="custService">
+                  <option value="Waterproofing Solutions" data-i18n="opt_water">عزل مائي وحراري للأسطح</option>
+                  <option value="Rock Star Membrane" data-i18n="opt_rockstar">عزل روك ستار الألماني</option>
+                  <option value="Hospitality Design" data-i18n="opt_hosp">تصميم وتشطيب فندقي</option>
+                  <option value="Construction Works" data-i18n="opt_dev">مقاولات وإنشاءات عامة</option>
+                </select>
+              </div>
+
+              <button class="pill pill-gold pill-large" type="submit" style="width: 100%; margin-top: 10px;" data-i18n="btn_submit">
+                <span>تأكيد الحجز عبر واتساب</span>
+                &larr;
+              </button>
+            </form>
+
+            <div class="form-success" id="formSuccess">
+              <img src="mark.png" onerror="this.src='nr1/mark.png'" alt="NUMBER ONE Mark">
+              <h3 style="color:#ffffff; font-size: 22px; margin-bottom: 8px;" data-i18n="success_title">تم تجهيز طلبك بنجاح!</h3>
+              <p style="color:rgba(255,255,255,0.75); font-size: 13.5px; margin-bottom: 20px;" data-i18n="success_desc">
+                شكراً لثقتك في NUMBER ONE. اضغط للمتابعة الفورية عبر واتساب:
+              </p>
+              <a class="pill pill-gold" id="btnContinueWa" target="_blank" rel="noopener" data-i18n="btn_continue">متابعة على واتساب</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. MINIMAL LUXURY FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <a href="#home" class="footer-brand">
+          <img src="logo.png" onerror="this.src='nr1/logo.png'; this.onerror=function(){this.src='بروفيل.png';}" alt="NUMBER ONE">
+        </a>
+
+        <div class="footer-links">
+          <a href="#services" data-i18n="nav_services">القطاعات</a>
+          <a href="#about" data-i18n="nav_about">عن المجموعة</a>
+          <a href="#inspection" data-i18n="nav_inspection">فحص السطح</a>
+          <a href="#gallery" data-i18n="nav_gallery">الأعمال</a>
+          <a href="#contact" data-i18n="nav_contact">تواصل معنا</a>
+        </div>
+
+        <div class="footer-contact-info">
+          <a href="tel:01099227740" dir="ltr">01099227740</a>
+          <span>·</span>
+          <a href="mailto:n1.egy@hotmail.com" dir="ltr">n1.egy@hotmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NUMBER ONE GROUP. All rights reserved.</div>
+        <div>Beyond Construction · Three Divisions, One Vision.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="fab-wrap">
+    <a class="fab-btn fab-wa" href="https://wa.me/201099227740?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20NUMBER%20ONE%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D9%85%D8%B9%D8%A7%D9%8A%D9%86%D8%A9%20%D9%84%D9%84%D8%B3%D8%B7%D8%AD." target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+    <a class="fab-btn fab-call" href="tel:01099227740" aria-label="Direct Call">
+      ☎
+    </a>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <dialog id="lightbox">
+    <div class="lb-content">
+      <button class="lb-close" onclick="closeLightbox()">&times;</button>
+      <img id="lbImg" src="" alt="">
+      <p id="lbCaption" style="color:var(--gold-light); margin-top:14px; font-weight:600;"></p>
+    </div>
+  </dialog>
+
+  <!-- ========================================================================
+       11. JAVASCRIPT: BILINGUAL ENGINE, VIDEO AUDIO, SLIDER & SCROLL REVEAL
+       ======================================================================== -->
+  <script>
+  (function() {
+    'use strict';
+
+    /* Bilingual Dictionary */
+    const I18N = {
+      ar: {
+        splash_slogan: "Three Divisions · One Vision",
+        splash_skip: "اضغط أو مرّر للدخول / CLICK TO ENTER",
+        nav_services: "القطاعات",
+        nav_about: "عن المجموعة",
+        nav_inspection: "فحص السطح",
+        nav_gallery: "الأعمال",
+        nav_contact: "تواصل معنا",
+        cta_header: "احجز معاينة",
+        hero_eyebrow: "WATERPROOFING · HOSPITALITY · DEVELOPMENTS",
+        hero_title: "العزل أساس<br><em>أمان بيتك.</em>",
+        hero_copy: "نحمي ما تبنيه اليوم ليبقى آمناً لأجيال، بأنظمة عزل مائي وحراري هندسية معتمدة بضمان يصل إلى 10 سنوات.",
+        cta_inspect: "افحص سطحك الآن",
+        cta_services: "اكتشف القطاعات",
+        scroll_cue: "مرّر للأسفل",
+        kicker_about: "01 / الرؤية والأساس",
+        intro_title: "نحمي المباني<br>من أول نقطة.",
+        intro_lead: "مجموعة هندسية متخصصة تجمع بين تكنولوجيا العزل الأوروبية، أرقى التشطيبات الفندقية، والتطوير الإنشائي المتكامل.",
+        intro_sub: "من المعاينة الأولى وحتى التسليم والضمان، ندرس كل منشأة كحالة مستقلة لنقدم حلاً هندسياً شاملاً يدوم لعقود دون حاجة لحلول ترقيعية.",
+        intro_link: "تواصل مع الفريق الهندسي",
+        kicker_services: "القطاعات المتخصصة",
+        services_title: "ثلاثة قطاعات.<br>رؤية واحدة.",
+        services_sub: "منظومة هندسية متكاملة تضمن حماية وجمال واستدامة استثماراتك العقارية.",
+        s1_title: "العزل المائي والحراري",
+        s1_desc: "حماية تامة للأسطح والخزانات من تسريبات الأمطار وحرارة الصيف الشديدة.",
+        btn_inspect_div: "حجز معاينة ←",
+        s2_title: "عزل روك ستار المعتمد",
+        s2_desc: "أغشية بيتومينية ألمانية معززة بالبوليستر ومقاومة للإجهادات الحرارية.",
+        btn_specs: "المواصفات والضمان ←",
+        s3_title: "التصميم الفندقي والإنشاءات",
+        s3_desc: "تشطيبات معمارية فاخرة وإشراف هندسي متكامل للڤلل والفنادق والمنشآت.",
+        btn_consult: "استشارة معمارية ←",
+        kicker_trust: "جودة تؤكدها الأرقام",
+        trust_title: "حماية تعتمد عليها.",
+        trust_desc: "لا نقيس النجاح بعدد المشروعات فقط، بل بعدد السنوات التي تظل فيها منشآتك آمنة وخالية من أي تسريب.",
+        stat_y: "سنوات ضمان",
+        stat_p: "مقاوم للتسريب",
+        stat_sqm: "م² مساحات معزولة",
+        stat_resp: "سرعة المعاينة",
+        kicker_inspect: "فحص السطح",
+        inspect_title: "الفرق يبدأ<br>بالمعاينة الصحيحة.",
+        inspect_desc: "الشروخ، البقع الداكنة، وتجمع المياه علامات مبكرة لا يجب تجاهلها. حرّك المؤشر لمشاهدة الفرق الحقيقي بعد العزل المعتمد.",
+        cta_free_audit: "اطلب معاينة مجانية",
+        tag_before: "قبل",
+        tag_after: "بعد",
+        kicker_gallery: "سجل المشروعات",
+        gallery_title: "نتيجة تتحدث<br>عن نفسها.",
+        gallery_sub: "مشروعات حقيقية، تفاصيل هندسية دقيقة، وجودة تحافظ على قيمة كل منشأة.",
+        g1_title: "حماية في كل موسم — فيلات سكنية",
+        g2_title: "تنفيذ هندسي دقيق بشعلة اللحام",
+        g3_title: "تطوير وإنشاءات متكاملة",
+        kicker_contact: "جاهز تحمي بيتك؟",
+        contact_title: "قبل أول مطرة،<br>خلّي سطحك جاهز.",
+        contact_sub: "احجز موعد المعاينة الهندسية المعتمدة وتواصل مباشرة مع الفريق الفني لمجموعة NUMBER ONE.",
+        lbl_phone: "الخط الساخن",
+        lbl_name: "الاسم بالكامل *",
+        lbl_mobile: "رقم الموبايل / واتساب *",
+        lbl_service: "نوع الخدمة المطلوبة",
+        opt_water: "عزل مائي وحراري للأسطح",
+        opt_rockstar: "عزل روك ستار الألماني",
+        opt_hosp: "تصميم وتشطيب فندقي",
+        opt_dev: "مقاولات وإنشاءات عامة",
+        btn_submit: "تأكيد الحجز عبر واتساب",
+        success_title: "تم تجهيز طلبك بنجاح!",
+        success_desc: "شكراً لثقتك في NUMBER ONE. اضغط للمتابعة الفورية عبر واتساب:",
+        btn_continue: "متابعة على واتساب"
+      },
+      en: {
+        splash_slogan: "Three Divisions · One Vision",
+        splash_skip: "CLICK OR SCROLL TO ENTER",
+        nav_services: "Divisions",
+        nav_about: "About",
+        nav_inspection: "Inspection",
+        nav_gallery: "Portfolio",
+        nav_contact: "Contact",
+        cta_header: "Book Inspection",
+        hero_eyebrow: "WATERPROOFING · HOSPITALITY · DEVELOPMENTS",
+        hero_title: "Beyond Construction.<br><em>Built to Last.</em>",
+        hero_copy: "Protecting what you build today for generations to come, with certified engineering insulation and up to 10-year warranty.",
+        cta_inspect: "Inspect Your Roof",
+        cta_services: "Explore Divisions",
+        scroll_cue: "Scroll to explore",
+        kicker_about: "01 / THE FOUNDATION",
+        intro_title: "Protection from<br>the first drop.",
+        intro_lead: "A specialized engineering group uniting advanced German waterproofing technology, luxury hospitality fit-out, and master construction.",
+        intro_sub: "From initial diagnostics to execution and warranty, we engineer permanent solutions designed to withstand extreme climate and time.",
+        intro_link: "Consult Our Engineers",
+        kicker_services: "CORE DIVISIONS",
+        services_title: "Three Pillars.<br>One Vision.",
+        services_sub: "An integrated architectural system ensuring the endurance and value of your real estate investments.",
+        s1_title: "Waterproofing & Insulation",
+        s1_desc: "All-season protection for roofs and water tanks against heavy rains and extreme heat.",
+        btn_inspect_div: "Request Audit →",
+        s2_title: "Rock Star™ German Membrane",
+        s2_desc: "High-performance polymer-bitumen membranes reinforced with high-density polyester.",
+        btn_specs: "Specifications & Warranty →",
+        s3_title: "Hospitality Fit-Out & Works",
+        s3_desc: "5-star architectural interior finishing, site management, and turnkey construction.",
+        btn_consult: "Consult Architect →",
+        kicker_trust: "PROVEN CRAFTSMANSHIP",
+        trust_title: "Trust Built on Results.",
+        trust_desc: "We measure success not merely in delivered projects, but in decades our properties stay dry and secure.",
+        stat_y: "Years Warranty",
+        stat_p: "Leakproof Certified",
+        stat_sqm: "Sqm Protected",
+        stat_resp: "Fast Response",
+        kicker_inspect: "ROOF DIAGNOSTICS",
+        inspect_title: "Precision Begins<br>with Diagnosis.",
+        inspect_desc: "Cracks, dark moisture patches, and standing water ponds are urgent early warnings. Slide to witness certified protection.",
+        cta_free_audit: "Request Free Site Audit",
+        tag_before: "Before",
+        tag_after: "After",
+        kicker_gallery: "SELECTED WORKS",
+        gallery_title: "Quietly<br>Iconic.",
+        gallery_sub: "Real installations, meticulous craftsmanship, preserving the enduring luxury of each structure.",
+        g1_title: "All-Season Protection — Luxury Villas",
+        g2_title: "Precision Dual-Torch Application",
+        g3_title: "Turnkey Structural Works",
+        kicker_contact: "READY TO PROTECT YOUR PROPERTY?",
+        contact_title: "Before the next rain,<br>ensure your roof is ready.",
+        contact_sub: "Schedule your engineering inspection today and connect directly with NUMBER ONE specialists.",
+        lbl_phone: "Direct Hotline",
+        lbl_name: "Full Name *",
+        lbl_mobile: "Mobile / WhatsApp *",
+        lbl_service: "Requested Division",
+        opt_water: "Waterproofing & Insulation",
+        opt_rockstar: "Rock Star™ German Membrane",
+        opt_hosp: "Hospitality Design & Fit-Out",
+        opt_dev: "General Construction Works",
+        btn_submit: "Confirm via WhatsApp",
+        success_title: "Request Prepared Successfully!",
+        success_desc: "Thank you for trusting NUMBER ONE. Click below to continue directly to WhatsApp:",
+        btn_continue: "Continue to WhatsApp"
+      }
+    };
+
+    /* 1. Splash Screen Logic */
+    const splash = document.getElementById('splashScreen');
+    function dismissSplash() {
+      if (!splash || splash.classList.contains('is-hidden')) return;
+      splash.classList.add('is-hidden');
+      setTimeout(() => splash.remove(), 900);
+    }
+    const splashTimer = setTimeout(dismissSplash, 1800);
+    if (splash) {
+      splash.addEventListener('click', () => {
+        clearTimeout(splashTimer);
+        dismissSplash();
+      });
+    }
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') dismissSplash();
+    });
+
+    /* 2. Language Switcher */
+    let currentLang = localStorage.getItem('n1_lang') || 'ar';
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('n1_lang', lang);
+      const isAr = lang === 'ar';
+      document.documentElement.lang = isAr ? 'ar' : 'en';
+      document.documentElement.dir = isAr ? 'rtl' : 'ltr';
+
+      const btnLang = document.getElementById('btnLangToggle');
+      if (btnLang) btnLang.textContent = isAr ? 'EN' : 'عربي';
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (I18N[lang] && I18N[lang][key] !== undefined) {
+          el.innerHTML = I18N[lang][key];
+        }
+      });
+    }
+
+    const btnLang = document.getElementById('btnLangToggle');
+    if (btnLang) {
+      btnLang.addEventListener('click', () => {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      });
+    }
+    setLanguage(currentLang);
+
+    /* 3. Sticky Header */
+    const siteHeader = document.getElementById('siteHeader');
+    window.addEventListener('scroll', () => {
+      if (siteHeader) {
+        if (window.scrollY > 30) siteHeader.classList.add('is-scrolled');
+        else siteHeader.classList.remove('is-scrolled');
+      }
+    }, { passive: true });
+
+    /* 4. Mobile Menu Drawer */
+    const menuToggle = document.getElementById('menuToggle');
+    const drawerClose = document.getElementById('drawerClose');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => mobileDrawer.classList.add('is-active'));
+    }
+    if (drawerClose && mobileDrawer) {
+      drawerClose.addEventListener('click', () => mobileDrawer.classList.remove('is-active'));
+    }
+    if (mobileDrawer) {
+      mobileDrawer.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => mobileDrawer.classList.remove('is-active'));
+      });
+    }
+
+    /* 5. Hero Video Sound Toggle (Grova Style) */
+    const heroVideo = document.getElementById('heroVideo');
+    const btnSoundToggle = document.getElementById('btnSoundToggle');
+    const soundText = document.getElementById('soundText');
+    if (heroVideo && btnSoundToggle) {
+      btnSoundToggle.addEventListener('click', () => {
+        heroVideo.muted = !heroVideo.muted;
+        if (soundText) soundText.textContent = heroVideo.muted ? "Sound Off" : "Sound On";
+      });
+    }
+
+    /* 6. Kinetic Parallax Text as User Scrolls Through Video */
+    const tickerTrack = document.getElementById('tickerTrack');
+    window.addEventListener('scroll', () => {
+      if (tickerTrack && window.scrollY < window.innerHeight) {
+        const scrollFactor = window.scrollY * 0.25;
+        tickerTrack.style.letterSpacing = (0.08 + window.scrollY * 0.0001) + 'em';
+      }
+    }, { passive: true });
+
+    /* 7. Scroll Reveal (Content appears when sliding down) */
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-inview');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(el => observer.observe(el));
+
+    /* 8. Comparison Slider */
+    const compareRange = document.getElementById('compareRange');
+    const compareAfter = document.getElementById('compareAfter');
+    const compareLine = document.getElementById('compareLine');
+    const compareBox = document.getElementById('compareBox');
+
+    function updateSlider(val) {
+      const v = Math.max(0, Math.min(100, val));
+      if (compareAfter) compareAfter.style.clipPath = `polygon(${v}% 0%, 100% 0%, 100% 100%, ${v}% 100%)`;
+      if (compareLine) compareLine.style.left = `${v}%`;
+    }
+
+    if (compareRange) {
+      compareRange.addEventListener('input', (e) => updateSlider(e.target.value));
+    }
+    updateSlider(50);
+
+    /* 9. VIP Contact Form Submit to WhatsApp */
+    const contactForm = document.getElementById('contactForm');
+    const formSuccess = document.getElementById('formSuccess');
+    const btnContinueWa = document.getElementById('btnContinueWa');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('custName').value.trim();
+        const phone = document.getElementById('custPhone').value.trim();
+        const service = document.getElementById('custService').value;
+
+        const isAr = currentLang === 'ar';
+        const msg = isAr
+          ? `مرحباً NUMBER ONE GROUP،
+أرغب في حجز موعد معاينة هندسية:
+• الاسم: ${name}
+• الموبايل: ${phone}
+• الخدمة: ${service}`
+          : `Hello NUMBER ONE GROUP,
+I would like to request an engineering site inspection:
+• Name: ${name}
+• Phone: ${phone}
+• Division: ${service}`;
+
+        const waLink = `https://wa.me/201099227740?text=${encodeURIComponent(msg)}`;
+        window.open(waLink, '_blank');
+
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.classList.add('is-visible');
+        if (btnContinueWa) btnContinueWa.href = waLink;
+      });
+    }
+
+    /* 10. Lightbox Modal */
+    window.openLightbox = function(src, caption) {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lbImg');
+      const lbCap = document.getElementById('lbCaption');
+      if (lb && lbImg) {
+        lbImg.src = src;
+        if (lbCap) lbCap.textContent = caption || '';
+        if (typeof lb.showModal === 'function') lb.showModal();
+        else lb.setAttribute('open', 'true');
+      }
+    };
+
+    window.closeLightbox = function() {
+      const lb = document.getElementById('lightbox');
+      if (lb) {
+        if (typeof lb.close === 'function') lb.close();
+        else lb.removeAttribute('open');
+      }
+    };
+
+    const lightboxEl = document.getElementById('lightbox');
+    if (lightboxEl) {
+      lightboxEl.addEventListener('click', (e) => {
+        if (e.target === lightboxEl) closeLightbox();
+      });
+    }
+
+  })();
+  </script>
+</body>
+</html>
